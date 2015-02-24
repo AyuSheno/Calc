@@ -1,0 +1,68 @@
+#include <conio.h>
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+float op1,op2;
+char op,exit_yn;
+int l=1,loop_targ=2;
+while (l<loop_targ)
+{
+cout<<"Welcome to Calculator."<<endl<<endl;
+cout<<"Press 'A' for addition,"<<endl;
+cout<<"      'S' for subtraction,"<<endl;
+cout<<"      'M' for multiplication,"<<endl;
+cout<<"      'D' for division"<<endl;
+cout<<"      'X' to exit and return to your desktop."<<endl<<endl;
+cin>>op;
+switch(op)
+{
+	case 'A':
+    cout<<endl;
+	cout<<"Enter no. 1"<<endl;
+	cin>>op1;
+	cout<<"Enter no. 2"<<endl;
+	cin>>op2;
+	cout<<"The sum is "<<op1+op2<<endl<<endl;
+	case 'S':
+    cout<<endl;
+    cout<<"Enter no. 1"<<endl;
+	cin>>op1;
+	cout<<"Enter no. 2"<<endl;
+	cin>>op2;
+	cout<<"The difference is "<<op1-op2<<endl<<endl;
+	break;
+	case 'M':
+    cout<<endl;
+	cout<<"Enter no. 1"<<endl;
+	cin>>op1;
+	cout<<"Enter no. 2"<<endl;
+	cin>>op2;
+	cout<<"The product is "<<op1*op2<<endl<<endl;
+	break;
+	case 'D':
+    cout<<endl;
+	cout<<"Enter no. 1"<<endl;
+	cin>>op1;
+	cout<<"Enter no. 2"<<endl;
+	cin>>op2;
+	if (op2==0)
+	cout<<"Indeterminable Value"<<endl<<endl;
+	else
+	cout<<"The quotient is "<<op1/op2<<endl<<endl;
+	break;
+	case 'X':
+    cout<<endl;
+    cout<<"Do you want to close Calculator? <Y/N>"<<endl;
+    cin>>exit_yn;
+    if (exit_yn=='Y')
+    exit(0);
+    else cout<<endl;
+    break;
+	default:
+	cout<<"!!INVALID INPUT!!"<<endl<<endl;
+	break;
+}
+}
+}
